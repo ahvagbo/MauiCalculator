@@ -1,4 +1,4 @@
-﻿using System.Runtime.InteropServices.ObjectiveC;
+﻿using System.Data;
 
 namespace MauiCalculator
 {
@@ -48,6 +48,16 @@ namespace MauiCalculator
 
         private void Equals_Pressed(object sender, EventArgs e)
         {
+            try
+            {
+                decimal res = Convert.ToDecimal(new DataTable().Compute(ResultLabel.Text, ""));
+                ExpressionLabel.Text = ResultLabel.Text;
+                ResultLabel.Text = res.ToString().Replace(',', '.');
+            }
+            catch (Exception)
+            {
+                ResultLabel.Text = "Error";
+            }
         }
 
         private void CE_Pressed(object sender, EventArgs e)
