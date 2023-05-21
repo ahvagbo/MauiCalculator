@@ -48,6 +48,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="CoreCLR-NCalc" Version="2.2.113" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0-preview.4.23259.5" />
 	</ItemGroup>
 
