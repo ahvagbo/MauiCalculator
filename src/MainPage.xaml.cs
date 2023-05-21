@@ -42,7 +42,7 @@ namespace MauiCalculator
             }
         }
 
-        private void Comma_Pressed(object sender, EventArgs e)
+        private void Point_Pressed(object sender, EventArgs e)
         {
             ResultLabel.Text += ".";
         }

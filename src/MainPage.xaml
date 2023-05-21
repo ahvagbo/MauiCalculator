@@ -59,7 +59,7 @@
 
             <Button Text="&#x00B1;" Grid.Row="5" Grid.Column="0" />
             <Button Text="0" Grid.Row="5" Grid.Column="1" Pressed="NumButton_Pressed" />
-            <Button Text="," Grid.Row="5" Grid.Column="2" Pressed="Comma_Pressed"/>
+            <Button Text="." Grid.Row="5" Grid.Column="2" Pressed="Point_Pressed"/>
             <Button Text="=" Grid.Row="5" Grid.Column="3" BackgroundColor="CornflowerBlue" TextColor="White"
                     Pressed="Equals_Pressed"/>
         </Grid>
