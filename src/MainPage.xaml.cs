@@ -1,4 +1,5 @@
 ﻿using System.Data;
+using NCalc;
 
 namespace MauiCalculator
 {
@@ -50,12 +51,14 @@ namespace MauiCalculator
         {
             try
             {
-                decimal res = Convert.ToDecimal(new DataTable().Compute(ResultLabel.Text, ""));
+                Expression expr = new Expression(ResultLabel.Text);
                 ExpressionLabel.Text = ResultLabel.Text;
-                ResultLabel.Text = res.ToString().Replace(',', '.');
+                ResultLabel.Text = expr.Evaluate().ToString().Replace(',', '.');
             }
+
             catch (Exception)
             {
+                ExpressionLabel.Text = "0";
                 ResultLabel.Text = "Error";
             }
         }
